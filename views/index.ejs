@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header'); -%>
+
+  <body>
+    <%- include('layouts/navbar'); -%>
+
+    <main>
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Để lại thông tin liên hệ</h2>
+
+              <form
+                class="cta-form"
+                name="sign-up"
+                action="/"
+                method="POST"
+                netlify
+              >
+                <div>
+                  <label for="full_name">Họ và Tên</label>
+                  <input
+                    id="ful_name"
+                    type="text"
+                    placeholder="Nguyễn Văn A"
+                    name="name"
+                  />
+                </div>
+
+                <div>
+                  <label for="phone">Số điện thoại</label>
+                  <input
+                    id="phone"
+                    type="number"
+                    placeholder="03737272"
+                    name="phone"
+                  />
+                </div>
+
+                <div>
+                  <label for="address">Địa chỉ</label>
+                  <input
+                    id="address"
+                    type="text"
+                    placeholder="VD: Võ Cường, TP. Bắc Ninh"
+                    name="address"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn--form">Xác nhận</button>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('layouts/footer'); -%>
+  </body>
+</html>

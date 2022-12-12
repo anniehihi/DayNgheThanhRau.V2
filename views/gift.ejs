@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header'); -%>
+
+  <body>
+    <%- include('layouts/navbar'); -%>
+
+    <main>
+      <section class="section-how" id="how">
+        <div class="container">
+          <!-- <span class="subheading">How it works</span> -->
+          <h2 class="heading-secondary">Tham gia nhóm Zalo</h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- STEP 01 -->
+          <div class="step-text-box">
+            <ul>
+              <li class="step-description">
+                ĐỂ BIẾT THÔNG TIN CHI TIẾT KHOÁ HỌC HÃY THAM GIA NHÓM ZALO BẰNG
+                CÁCH ẤN LIÊN KẾT
+                <a href="https://zalo.me/g/jytouy168"
+                  >https://zalo.me/g/jytouy168</a
+                >
+                NÀY NHÉ
+              </li>
+              <li class="step-description">
+                LIÊN HỆ QUA SĐT, ZALO - 0961201988
+              </li>
+            </ul>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="img/qr-code-styling.png"
+              class="step-img"
+              alt="iPhone app
+                  preferences selection screen"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Để lại thông tin liên hệ</h2>
+
+              <form class="cta-form" name="sign-up" netlify>
+                <div>
+                  <label for="full-name">Họ và Tên</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Nguyễn Văn A"
+                    name="full-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="phone">Số điện thoại</label>
+                  <input
+                    id="phone"
+                    type="number"
+                    placeholder="03737272"
+                    name="phone"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="address">Địa chỉ</label>
+                  <input
+                    id="address"
+                    type="text"
+                    placeholder="VD: Võ Cường, TP. Bắc Ninh"
+                    name="address"
+                  />
+                </div>
+
+                <button class="btn btn--form">Xác nhận</button>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('layouts/footer'); -%>
+  </body>
+</html>

@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 
 const Profile = require("./models/profileModel");
 
+mongoose.set("strictQuery", false);
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
@@ -28,6 +30,10 @@ app.get("/", (request, response) => {
   response.render("index");
 });
 
+app.get("/zalo", (request, response) => {
+  response.render("zalo");
+});
+
 app.get("/admin", (req, res) => {
   Profile.find({}, function (error, profiles) {
     res.render("admin/index", {
@@ -41,8 +47,7 @@ app.get("/detailCourse", (request, response) => {
 });
 
 app.post("/", (req, res) => {
-  console.log(req.body);
   Profile.create(req.body, (error, data) => {
-    res.redirect("/");
+    res.redirect("/zalo");
   });
 });

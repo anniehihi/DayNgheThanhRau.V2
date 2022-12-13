@@ -1,30 +1,46 @@
-<section class="section-how" id="how">
-  <div class="container">
-    <!-- <span class="subheading">How it works</span> -->
-    <h2 class="heading-secondary">Tham gia nhóm Zalo</h2>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header'); -%>
 
-  <div class="container grid grid--2-cols grid--center-v">
-    <!-- STEP 01 -->
-    <div class="step-text-box">
-      <ul>
-        <li class="step-description">
-          ĐỂ BIẾT THÔNG TIN CHI TIẾT KHOÁ HỌC HÃY THAM GIA NHÓM ZALO BẰNG CÁCH
-          ẤN LIÊN KẾT
-          <a href="https://zalo.me/g/jytouy168">https://zalo.me/g/jytouy168</a>
-          NÀY NHÉ
-        </li>
-        <li class="step-description">LIÊN HỆ QUA SĐT, ZALO - 0961201988</li>
-      </ul>
-    </div>
+  <body>
+    <%- include('layouts/navbar'); -%>
 
-    <div class="step-img-box">
-      <img
-        src="img/qr-code-styling.png"
-        class="step-img"
-        alt="iPhone app
-        preferences selection screen"
-      />
-    </div>
-  </div>
-</section>
+    <main>
+      <section class="section-how" id="how">
+        <div class="container">
+          <!-- <span class="subheading">How it works</span> -->
+          <h2 class="heading-secondary">Tham gia nhóm Zalo</h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- STEP 01 -->
+          <div class="step-text-box">
+            <ul>
+              <li class="step-description">
+                ĐỂ BIẾT THÔNG TIN CHI TIẾT KHOÁ HỌC HÃY THAM GIA NHÓM ZALO BẰNG
+                CÁCH ẤN LIÊN KẾT
+                <a href="https://zalo.me/g/jytouy168"
+                  >https://zalo.me/g/jytouy168</a
+                >
+                NÀY NHÉ
+              </li>
+              <li class="step-description">
+                LIÊN HỆ QUA SĐT, ZALO - 0961201988
+              </li>
+            </ul>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="img/qr-code-styling.png"
+              class="step-img"
+              alt="iPhone app
+              preferences selection screen"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('layouts/footer'); -%>
+  </body>
+</html>

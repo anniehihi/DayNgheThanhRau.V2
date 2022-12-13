@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const XLXS = require("xlsx");
 
 const Profile = require("./models/profileModel");
 
@@ -49,5 +50,22 @@ app.get("/detailCourse", (request, response) => {
 app.post("/", (req, res) => {
   Profile.create(req.body, (error, data) => {
     res.redirect("/zalo");
+  });
+});
+
+app.post("/exportdata", (req, res) => {
+  const wb = XLXS.utils.book_new(); //new workbook
+  Profile.find((err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      let temp = JSON.stringify(data);
+      temp = JSON.parse(temp);
+      let ws = XLXS.utils.json_to_sheet(temp);
+      var down = __dirname + "/public/exportdata.xlsx";
+      XLXS.utils.book_append_sheet(wb, ws, "sheet1");
+      XLXS.writeFile(wb, down);
+      res.download(down);
+    }
   });
 });
